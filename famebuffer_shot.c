@@ -124,16 +124,17 @@ static void image_bmp( const char *filename)
 		{
 			/*字节数*/
 			long location = (x + vinfo.xoffset) * (vinfo.bits_per_pixel/8) + (y + vinfo.yoffset) * finfo.line_length;
-			fseek(raw_file, location, SEEK_SET);
+			fseek(raw_file, location, SEEK_SET);/*将文件句柄定位到相应的位置*/
+			/*写入第一个字节*/
 			ch = fgetc(raw_file);
 			fputc(ch,image_file);
-
+			/*写入第二个字节*/
 			ch = fgetc(raw_file);
 			fputc(ch,image_file);
-
+    			/*写入第三个字节*/
 			ch = fgetc(raw_file);
 			fputc(ch,image_file);
-
+			/*写入第四个字节*/
 			ch = fgetc(raw_file);
 			fputc(ch,image_file); 
 		}
