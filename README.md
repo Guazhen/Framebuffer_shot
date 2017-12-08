@@ -1,0 +1,2 @@
+# Framebuffer_shot
+该文件用于截取framebuffer的图片
