@@ -15,3 +15,11 @@ arm-poky-linux-gnueabi-gcc  -march=armv7-a -mfloat-abi=hard -mfpu=neon -mtune=co
 example: ./imax6_4 -o imax6_4 -t bmp
 
 #文件输出的文件名:imax6_4  文件格式: bmp
+
+
+
+framebuffer_shot_png.c
+#该文件实现了对嵌入式平台imx平台的/dev/fb0的文件进行读取,保存未png图片的
+arm-poky-linux-gnueabi-gcc  -march=armv7-a -mfloat-abi=hard -mfpu=neon -mtune=cortex-a9 --sysroot=/opt/fsl-imx-wayland/3.14.52-1.1.1/sysroots/cortexa9hf-vfp-neon-poky-linux-gnueabi -DSAL_PLATFORM_IMX6  -O2 -pipe -g -feliminate-unused-debug-types  -DSAL_PLATFORM_IMX6  -g -O2 -fno-strict-aliasing -pipe -Wall -W -Wold-style-definition -g -Wall -O1 -fomit-frame-pointer  -Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed  -g  demo_2.c -o imx6png -lpng
+
+交叉编译的环境需要根据实际的情况进行配置
