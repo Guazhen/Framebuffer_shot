@@ -28,14 +28,14 @@ arm-poky-linux-gnueabi-gcc  -march=armv7-a -mfloat-abi=hard -mfpu=neon -mtune=co
 #framework_shot.c 将实现bmp和png的代码整合在一起编译的时候需要 指定 -lpng动态库
 #example:
   usage: ./imx6_shot [-hpb] [FILENAME]
-imx6 [option]...
+  imx6 [option]...
   -p|--png                Save the file as a png.
   -b|--bmp                Save the file as a bmp
   -h|--help               help information.
-If FILENAME ends with .png it will be saved as a png.
-If FILENAME ends with .bmp it will be saved as a bmp.
-If FILENAME is not given, the default will be saved as a png.
-
-默认保存为png图片
+  If FILENAME ends with .png it will be saved as a png.
+  If FILENAME ends with .bmp it will be saved as a bmp.
+  If FILENAME is not given, the default will be saved as a png.
+  
+  默认保存为png图片
 -p 保存为png格式图片
 -b 保存为bmp格式图片
